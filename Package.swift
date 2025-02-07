@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let version = "4.0.2"
+let version = "4.0.7"
 let package = Package(
     name: "ZohoDeskPortalConfiguration",
     platforms: [
@@ -16,11 +16,11 @@ let package = Package(
             targets: ["ZohoDeskPortalConfiguration", "ZohoDeskPortalConfigurationPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/zoho/ZohoDeskPlatformUIKit.git", exact: "2.0.0-beta.9"),
-        .package(url: "https://github.com/zoho/ZohoDeskPortalAPIKit", exact: "4.0.2")
+        .package(url: "https://github.com/zoho/ZohoDeskPlatformUIKit.git", exact: "2.0.0-beta.11"),
+        .package(url: "https://github.com/zoho/ZohoDeskPortalAPIKit", exact: "4.0.7")
     ],
     targets: [
-        .binaryTarget(name: "ZohoDeskPortalConfiguration", url: "https://maven.zohodl.com/ZohoDesk/ZohoDeskPortalConfiguration/\(version)/ZohoDeskPortalConfiguration.zip", checksum: "575b69cfbcc1f3f23cdc464716e1ba230bae0fed58592349a420c43fdbb2ab84"),
+        .binaryTarget(name: "ZohoDeskPortalConfiguration", url: "https://maven.zohodl.com/ZohoDesk/ZohoDeskPortalConfiguration/\(version)/ZohoDeskPortalConfiguration.zip", checksum: "b670acf460ef9386b73e7d44733ea38775081e73f3007b1c298c61329ea881d0"),
         
         .target(
             name: "ZohoDeskPortalConfigurationPackage",
