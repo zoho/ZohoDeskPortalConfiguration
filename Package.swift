@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let version = "4.2.0"
+let version = "4.4.0"
 let package = Package(
     name: "ZohoDeskPortalConfiguration",
     platforms: [
@@ -16,11 +16,12 @@ let package = Package(
             targets: ["ZohoDeskPortalConfiguration", "ZohoDeskPortalConfigurationPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/zoho/ZohoDeskPlatformUIKit.git", exact: "2.0.0-beta.14"),
-        .package(url: "https://github.com/zoho/ZohoDeskPortalAPIKit", exact: "4.2.0")
+        .package(url: "https://github.com/zoho/ZohoDeskPlatformUIKit.git", exact: "2.0.0-beta.16"),
+        .package(url: "https://github.com/zoho/ZohoDeskPortalAPIKit", exact: "4.4.0"),
+        .package(url: "https://github.com/zoho/ZDHelperKit-iOS.git", exact: "2.0.0")
     ],
     targets: [
-        .binaryTarget(name: "ZohoDeskPortalConfiguration", url: "https://maven.zohodl.com/ZohoDesk/ZohoDeskPortalConfiguration/\(version)/ZohoDeskPortalConfiguration.zip", checksum: "6c0409e1e6e413120fbba333e025dd0b44b9bebebf55d4505feceb5d1a4fcbfb"),
+        .binaryTarget(name: "ZohoDeskPortalConfiguration", url: "https://maven.zohodl.com/ZohoDesk/ZohoDeskPortalConfiguration/\(version)/ZohoDeskPortalConfiguration.zip", checksum: "e9f4ffde6e331ab199e2c7fc685793bd8a77e1d8b215d036cdd761ad323a70c0"),
         
         .target(
             name: "ZohoDeskPortalConfigurationPackage",
@@ -28,7 +29,8 @@ let package = Package(
                 .product(name: "ZohoDeskPlatformUIKit", package: "ZohoDeskPlatformUIKit"),
                 .product(name: "ZDMediaPickerSDK", package: "ZohoDeskPlatformUIKit"),
                 .product(name: "ZohoDeskPlatformDataBridge", package: "ZohoDeskPlatformUIKit"),
-                .product(name: "ZohoDeskPortalAPIKit", package: "ZohoDeskPortalAPIKit")
+                .product(name: "ZohoDeskPortalAPIKit", package: "ZohoDeskPortalAPIKit"),
+                .product(name: "ZDHelperKit", package: "ZDHelperKit-iOS")
             ]
         )
     ]
